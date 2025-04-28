@@ -4,12 +4,10 @@ import pandas as pd
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from data.simulation import generate_synthetic_nc_effect
-from utils import rmse, plot_continuous_estimation, plot_binary_estimation, plot_auroc, plot_rmse, plot_continuous_potential_outcome_estimates
-from estimators.standard import mlp_inference, slearner_inference, tlearner_inference, \
-    train_slearner_grid_search, train_tlearner_grid_search, train_tarnet_grid_search
+from utils import rmse, plot_continuous_estimation
+from estimators.standard import mlp_inference, tlearner_inference, train_tlearner_grid_search
 from estimators.propensity import dragon_inference, train_dragon_grid_search
-from estimators.frontdoor import cfd_inference, train_lobster_grid_search, lobster_inference, \
-    train_cfd_tlearner_grid_search, train_cfd_dragon_grid_search, train_cfd_slearner_grid_search
+from estimators.frontdoor import cfd_inference, train_lobster_grid_search, lobster_inference, train_cfd_tlearner_grid_search
 
 
 def main(args):

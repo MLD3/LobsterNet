@@ -1,17 +1,14 @@
-import os, argparse, random, pickle, scipy
+import os, argparse, random, scipy
 import pandas as pd
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from sklearn.metrics import roc_auc_score, accuracy_score
-from utils import plot_binary_estimation, plot_auroc, plot_binary_potential_outcome_estimates, rmse, \
-      plot_binary_effect_estimates
+from sklearn.metrics import roc_auc_score
+from utils import plot_binary_estimation, plot_auroc, rmse, plot_binary_effect_estimates
 from data.amr_uti import generate_amr_uti_nc
-from estimators.standard import mlp_inference, slearner_inference, tlearner_inference, train_slearner_grid_search, \
-      train_tlearner_grid_search, train_tarnet_grid_search
+from estimators.standard import mlp_inference, tlearner_inference, train_tlearner_grid_search
 from estimators.propensity import dragon_inference, train_dragon_grid_search
-from estimators.frontdoor import cfd_inference, train_lobster_grid_search, lobster_inference, \
-      train_cfd_tlearner_grid_search, train_cfd_dragon_grid_search, train_cfd_slearner_grid_search, hybrid_inference
+from estimators.frontdoor import cfd_inference, train_lobster_grid_search, lobster_inference, train_cfd_tlearner_grid_search
 
 
 

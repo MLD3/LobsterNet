@@ -10,7 +10,7 @@ def train_estimator(y_concat_train, x_train, model, checkpoint_dir, loss, model_
     verbose=False, overwrite=False, metrics=None, early_stop=False):
 
     assert os.path.isdir(checkpoint_dir)
-    model_path = os.path.join(checkpoint_dir, f"{model_name}.keras")
+    model_path = os.path.join(checkpoint_dir, f"{model_name}.weights.h5")
     metric_path = os.path.join(checkpoint_dir, f"{model_name}_metrics.pkl")
     if os.path.isfile(model_path) and os.path.isfile(metric_path) and not overwrite:
         metric_dict = pickle.load(open(metric_path, 'rb'))

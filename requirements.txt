@@ -1,0 +1,8 @@
+pip install tensorflow[and-cuda]
+pip install numpy
+pip install pandas
+pip install scikit-learn
+pip install tqdm
+pip install matplotlib
+pip install seaborn
+pip install pyreadr

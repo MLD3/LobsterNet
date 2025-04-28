@@ -3,14 +3,11 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from sklearn.metrics import roc_auc_score
 from data.ihdp import generate_ihdp_nc, generate_ihdp_share
-from utils import rmse, plot_continuous_estimation, plot_binary_estimation, plot_auroc, plot_rmse, plot_continuous_potential_outcome_estimates
-from estimators.standard import mlp_inference, slearner_inference, tlearner_inference, \
-      train_slearner_grid_search, train_tlearner_grid_search, train_tarnet_grid_search
+from utils import rmse, plot_continuous_estimation
+from estimators.standard import mlp_inference, tlearner_inference, train_tlearner_grid_search
 from estimators.propensity import dragon_inference, train_dragon_grid_search
-from estimators.frontdoor import cfd_inference, train_lobster_grid_search, lobster_inference, \
-      train_cfd_tlearner_grid_search, train_cfd_dragon_grid_search, train_cfd_slearner_grid_search
+from estimators.frontdoor import cfd_inference, train_lobster_grid_search, lobster_inference, train_cfd_tlearner_grid_search
 
 def main(args):
       ### Initialization ###
@@ -19,7 +16,7 @@ def main(args):
       np.random.seed(args.rep)
       tf.random.set_seed(args.rep)
       assert os.path.isdir(args.data_dir)
-      rdata_path = os.path.join(args.data_dir, "IHDP", "ihdp.RData") # source: https://github.com/vdorie/npci
+      rdata_path = os.path.join(args.data_dir, "IHDP", "ihdp.RData")
       assert os.path.isfile(rdata_path)
       if args.type == "rate": data_str = f"rate={args.non_compliance_rate}_size={args.average_effect_size}"
       elif args.type == "share": data_str = f"share={args.sharing_amount}_size={args.average_effect_size}"
