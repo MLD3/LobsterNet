@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=""
 export TS_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
-n_parallel=50
+n_parallel=100
 pueue parallel $n_parallel
 
 
@@ -11,7 +11,7 @@ declare -a nc_rate_arr=(0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9)
 for nc_type in ${nc_type_arr[@]}; do
     for nc_rate in ${nc_rate_arr[@]}; do
         for model in ${model_arr[@]}; do
-            for rep in {0..4}; do 
+            for rep in {0..19}; do 
                 args="--non_compliance_type $nc_type --non_compliance_rate $nc_rate 
                       --average_effect_size 4.0 --model $model --rep $rep --type rate"
                 pueue add taskset -c 0-$n_parallel python main_ihdp.py $args 
@@ -26,7 +26,7 @@ declare -a nc_rate_arr=(0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.05 0.15 0.25 0.35 
 for nc_type in ${nc_type_arr[@]}; do
     for nc_rate in ${nc_rate_arr[@]}; do
         for model in ${model_arr[@]}; do
-            for rep in {0..4}; do 
+            for rep in {0..19}; do 
                 args="--non_compliance_type $nc_type --non_compliance_rate $nc_rate 
                       --average_effect_size 4.0 --model $model --rep $rep --type rate"
                 pueue add taskset -c 0-$n_parallel python main_ihdp.py $args 

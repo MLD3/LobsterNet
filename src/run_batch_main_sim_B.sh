@@ -13,7 +13,7 @@ pueue parallel $n_parallel
 for nc_type in ${nc_type_arr[@]}; do
    for effect in ${effects[@]}; do
       for model in "${model_arr[@]}"; do
-         for rep in {0..4}; do
+         for rep in {0..20}; do
             args="--n $n --p $p --non_compliance_type $nc_type --effect $effect --rep $rep --model $model --amplitude $amp"
             pueue add taskset -c 0-$n_parallel python main_sim_B.py $args
          done

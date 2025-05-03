@@ -6,7 +6,7 @@ n_parallel=20
 pueue parallel $n_parallel
 declare -a data_args_arr=("--non_compliance_type one-sided --prescriptions NIT")
 declare -a nc_rate_arr=(0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9)
-for rep in $(seq 0 5); do 
+for rep in $(seq 0 19); do 
     for data_args in "${data_args_arr[@]}"; do
         for rate in "${nc_rate_arr[@]}"; do
             for model_args in "${model_arr[@]}"; do
@@ -20,7 +20,7 @@ done
 # run two-sided non-compliance experiments
 declare -a data_args_arr=("--non_compliance_type two-sided --prescriptions NIT CIP")
 declare -a nc_rate_arr=(0.05 0.1 0.2 0.25 0.3 0.4 0.5 0.6 0.65 0.7 0.8 0.9 0.95)
-for rep in $(seq 0 5); do 
+for rep in $(seq 0 19); do 
     for data_args in "${data_args_arr[@]}"; do
         for rate in "${nc_rate_arr[@]}"; do
             for model_args in "${model_arr[@]}"; do
