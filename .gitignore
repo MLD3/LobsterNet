@@ -175,6 +175,5 @@ cython_debug/
 /figures
 /checkpoints
 settings.json
-/data/IHDP_NC
-/data
+/data/AMR-UTI
 *.jpg
