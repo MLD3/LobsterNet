@@ -5,7 +5,7 @@
 
 - It leverages the **conditional front-door adjustment (CFD)**, which theoretically gaurantees lower variance estimates than the commonly used standard backdoor adjustment (CFD) when the true treatment effect is small.
 
-- This repository contains experimental results in "**Heterogeneous Treatment Assignment Effect Estimation Under Non-adherance with Conditional Front-door Adjustment**" (CHIL 2025).
+- This repository contains reproducible codes for experimental results in "**Heterogeneous Treatment Assignment Effect Estimation Under Non-adherance with Conditional Front-door Adjustment**" (CHIL 2025).
 
 ---
 ## ▶️ Quick Start
