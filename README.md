@@ -28,7 +28,7 @@
 | `src/run_batch_main_ihdp.sh`    | Run IHDP experiments                       |
 | `src/run_batch_main_amruti.sh`  | Run AMR-UTI experiments                    |
 
-### 4: analyzing results
+### 4: analyze results
 | Path                                          | Description                                    |
 |-----------------------------------------------|------------------------------------------------|
 | `src/analysis/variance_viz.ipynb`             | Analyze asymptotic variance                    |
