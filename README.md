@@ -23,10 +23,10 @@
 ### 3: train and evaluate SBD and CFD estimators:
 | Path                              | Description                                |
 |-----------------------------------|--------------------------------------------|
-| `src/run_batch_main_sim_A.sh`   | Run synthetic dataset A experiments method |
-| `src/run_batch_main_sim_B.sh`   | Run synthetic dataset B experiments usage  |
-| `src/run_batch_main_ihdp.sh`    | Run IHDP experiments                       |
-| `src/run_batch_main_amruti.sh`  | Run AMR-UTI experiments                    |
+| `src/run_batch_main_sim_A.sh`     | Run synthetic dataset A experiments method |
+| `src/run_batch_main_sim_B.sh`     | Run synthetic dataset B experiments usage  |
+| `src/run_batch_main_ihdp.sh`      | Run IHDP experiments                       |
+| `src/run_batch_main_amruti.sh`    | Run AMR-UTI experiments                    |
 
 ### 4: analyze results
 | Path                                          | Description                                    |
